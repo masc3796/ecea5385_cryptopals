@@ -56,9 +56,6 @@ def ecb_cut_and_paste(block_size):
     
     global key
 
-    #Reference: https://bernardoamc.com/ecb-cut-paste-attack/
-    #Note!! Implementation here is still my own, but searched online for inspiration... 
-    
     #Exploit the fact that same plaintext always yields same ciphertext
     
     #Get one ciphertext block such that: has the word "admin" + padding
