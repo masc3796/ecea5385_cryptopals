@@ -51,7 +51,7 @@ def byte_at_a_time_ecb_decrypt(b1, block_size):
     
         #this loop derives one byte at a time
         for i in range(256):    
-            prefix_size = ((block_size-1) - len(salt)) % salt_size
+            prefix_size = ((block_size-1) - len(salt)) % block_size
             prefix = b"A"*prefix_size
             
             output_prefix_only = encrypt_ecb_append_string(prefix)                

@@ -9,12 +9,18 @@ from set1_challenge2 import fixed_XOR as byte_xor
 def ebc_encrypt(b1, key):
     cipher = AES.new(key, AES.MODE_ECB)
     return cipher.encrypt(b1)
+    
+#This is a hack due to discovering a typo in the name of the function waay to late
+def ecb_encrypt(b1, key):
+    return ebc_encrypt(b1, key)
 
 def ebc_decrypt(b1, key):
     cipher = AES.new(key, AES.MODE_ECB)
     return cipher.decrypt(b1)
     
-    
+def ecb_decrypt(b1, key):
+    return ebc_decrypt(b1, key)
+        
 def cbc_encrypt(b1, key, block_size, iv):
 
     ret = b''
